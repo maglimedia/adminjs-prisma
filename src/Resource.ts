@@ -146,7 +146,7 @@ export class Resource extends BaseResource {
     return !!model?.name && !!model?.fields.length && !!client?.[lowerCase(model.name)];
   }
 
-  private prepareProperties(): { [propertyPath: string]: Property } {
+  public prepareProperties(): { [propertyPath: string]: Property } {
     const { fields = [] } = this.model;
 
     return fields.reduce((memo, field) => {
@@ -161,7 +161,7 @@ export class Resource extends BaseResource {
     }, {});
   }
 
-  private prepareParams(params: Record<string, any>): Record<string, any> {
+  public prepareParams(params: Record<string, any>): Record<string, any> {
     const preparedParams: Record<string, any> = {};
 
     for (const property of this.properties()) {
@@ -191,7 +191,7 @@ export class Resource extends BaseResource {
     return preparedParams;
   }
 
-  private prepareReturnValues(params: Record<string, any>): Record<string, any> {
+  public prepareReturnValues(params: Record<string, any>): Record<string, any> {
     const preparedValues: Record<string, any> = {};
 
     for (const property of this.properties()) {

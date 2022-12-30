@@ -31,7 +31,7 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
-  "author": "Rafał Dzięgielewski <rafal.dzieg@gmail.com>",
+  "author": "Davi Mackley <david@maglimedia.com>",
   "license": "MIT",
   "peerDependencies": {
     "@prisma/client": "^4.0.0",
